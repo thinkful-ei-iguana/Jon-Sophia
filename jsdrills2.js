@@ -98,3 +98,28 @@ function daysOfTheMonth(month, leapYear){
     }
     return `${month} has ${numDays} days`
 }
+
+function rockPaperScissors(guess){
+    let computerGuess = Math.floor(Math.random() * 3) + 1;
+
+    if (typeof guess !== typeof 1) {
+        throw "Guess is not a number!";
+    }
+
+    if(guess === 1 && computerGuess === 2){
+        return "Player Wins!"
+    }
+
+    if(guess === 2 && computerGuess === 3){
+        return "Player Wins!"
+    }
+
+    if(guess === 3 && computerGuess === 1){
+        return "Player Wins!"
+    }
+
+    else return "Computer wins!"
+}
+
+rockPaperScissors(1);
+
