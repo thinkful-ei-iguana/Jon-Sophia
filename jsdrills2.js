@@ -88,10 +88,16 @@ function daysOfTheMonth(month, leapYear){
             numDays = 30;
             break;
 
-        if(numDays === 29){
-            return leapYear = false; 
-        }
-        else return leapYear = true;
+        case 'February':
+            if(leapYear === true){
+                numdays = 29;
+            }
+
+            else if (leapYear === false){
+                numdays = 28;
+            }
+             break;
+
 
         default:
             throw new Error('Must Provide A Valid Month');
