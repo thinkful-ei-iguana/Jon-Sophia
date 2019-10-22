@@ -68,7 +68,33 @@ function decode (encode){
     let result = decode('craft block argon meter bells brown croon droop');
     console.log(result);
 
+function daysOfTheMonth(month, leapYear){
 
+    switch(month) {
+        case 'January':
+        case 'March':
+        case 'May':
+        case 'July':
+        case 'August':
+        case 'October':
+        case 'December':
+            numDays = 31;
+            break;
 
+        case 'September':
+        case 'April':
+        case 'June':
+        case 'November':
+            numDays = 30;
+            break;
 
+        if(numDays === 29){
+            return leapYear = false; 
+        }
+        else return leapYear = true;
 
+        default:
+            throw new Error('Must Provide A Valid Month');
+    }
+    return `${month} has ${numDays} days`
+}
